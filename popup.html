@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            width: 300px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #linksContainer {
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .linkItem {
+            margin-bottom: 5px;
+            word-wrap: break-word;
+        }
+        .linkItem a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        .linkItem a:hover {
+            text-decoration: underline;
+        }
+        #linkCount {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        #status {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div id="status">Idle</div>
+    <button id="startButton">Start Browsing</button>
+    <button id="stopButton" style="display:none;">Stop Browsing</button>
+    <button id="saveLinks">Save Visited Links</button>
+    <button id="viewLinks">View Visited Links</button>
+    <div id="linkCount"></div>
+    <div id="linksContainer"></div>
+    <script src="popup.js"></script>
+</body>
+</html>
